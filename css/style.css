@@ -1,0 +1,152 @@
+body {
+    padding: 0;
+    margin: 0;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Contenedor Principal */
+.m-2 {
+    display: grid;
+    /* repeat(4, 1fr); cuatro columnas */
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 0;  
+}
+
+
+header {
+    grid-column: 1 / 3;  /* span 2 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgba(61, 51, 112, 0.979);
+    color: azure;
+    padding: 30px;
+}
+
+header h1{
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+#panel-izquierda{
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    background-color: rgba(47, 33, 112, 0.648);
+}
+
+#panel-izquierda{
+    padding: 20px;
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+    background-color: rgba(47, 33, 112, 0.648);
+}
+
+#panel-izquierda a {
+    margin: 20px;
+    display: block;
+    color:azure;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#principal{
+    margin-top: 30px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#cartas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 10px;  
+ 
+}
+
+#cartas div {
+    display: flex;
+    flex-direction: column;
+    color: rgba(61, 51, 112, 0.979);
+    border:  rgba(154, 137, 227, 0.914) solid 2px;
+    border-radius: 10px;
+
+}
+
+#cartas img {
+    padding: 0 20px;
+    width: 100%;
+    height: auto;
+    
+ 
+}
+
+#cartas h3{
+    font-size: 18px;
+    
+}
+
+#cartas h3,
+#cartas p{
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.botones{
+    display: flex;
+    margin:40px;
+    gap: 20px;
+}
+
+
+#siguiente{
+    margin-left: auto;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(61, 51, 112, 0.979);
+    color: azure;
+    font-size: large;
+    border-radius: 5px;
+    border: 2px solid rgb(32, 10, 10);
+}
+
+.guardar {
+    width: 60%;
+    height: 30px;
+    margin-bottom: 30px;
+    align-self: center;
+}
+
+#ordenarCodigo,
+#ordenarSuits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.oculto{
+    display: none;
+}
+
+/* menos de 900px */
+@media (max-width: 900px){
+    #cartas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* menos de 550px */
+@media (max-width: 550px){
+    #cartas{
+        grid-template-columns: 1fr;
+    }
+}
