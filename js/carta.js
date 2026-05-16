@@ -1,16 +1,18 @@
 export default class Carta {
-    codigo;
-    valor;
+    code;
+    value;
     suit;
     image;
+
    
 
 
-    constructor(codigo, valor, suit, image) {
-        this.codigo = codigo;
-        this.valor = valor;
+    constructor(code, value, suit, image) {
+        this.code = code;
+        this.value = value;
         this.suit = suit;
         this.image = image;
+
         
     }
 
@@ -32,12 +34,12 @@ export default class Carta {
     createHtmlElement(){
         const div = document.createElement("div");
         div.innerHTML = `
-            <h3>Codigo: ${this.codigo}</h3>
+            <h3>Codigo: ${this.code}</h3>
             <a href="${this.image}" target="_blank" rel="noopener noreferrer">
                 <img src="${this.image}" alt="imgCarta">
             </a> 
             <p>Suit: ${this.suit}</p>
-            <p>Valor: ${this.valor}</p>
+            <p>Valor: ${this.value}</p>
             <button class="guardar" data-id="${this.code}">Guardar</button>
             `;
      

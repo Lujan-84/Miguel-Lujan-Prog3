@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const btnAnterior = $("anterior");
     
     await cargarPagina(numero, cartas, arrayDatos, pagina);
-
+  
     btnSiguiente.addEventListener("click", async () => {
         pagina++;         
         numero = await paginaSiguiente(cartas, arrayDatos, numero, pagina);
@@ -61,6 +61,7 @@ const cargarPagina = async (numero, cartas, arrayDatos, pagina) => {
     arrayDatos = arrayDatos.slice(inicio, fin);
     
     cartas = mapearCartas(arrayDatos); 
+    
     configurarBotones(pagina);  
     renderizarCartas(cartas);
     const botonesGuardar = document.querySelectorAll(".guardar");

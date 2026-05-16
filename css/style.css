@@ -4,10 +4,9 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Contenedor Principal */
+
 .m-2 {
     display: grid;
-    /* repeat(4, 1fr); cuatro columnas */
     grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
     margin: 0;  
@@ -15,7 +14,7 @@ body {
 
 
 header {
-    grid-column: 1 / 3;  /* span 2 */
+    grid-column: 1 / 3;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,14 +136,14 @@ button {
     display: none;
 }
 
-/* menos de 900px */
+
 @media (max-width: 900px){
     #cartas{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* menos de 550px */
+
 @media (max-width: 550px){
     #cartas{
         grid-template-columns: 1fr;

@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let ordenarPorCodigo = $("ordenarCodigo");
     ordenarPorCodigo.addEventListener("click", () => {
         cartasGuardadas.sort((a,b) => {
-            if (a.codigo < b.codigo) {
+            if (a.code < b.code) {
                 return -1;
             }
-            if (a.codigo > b.codigo) {
+            if (a.code > b.code) {
                 return 1;
             }
             return 0;
@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let ordenarPorValor = $("ordenarValor");
     ordenarPorValor.addEventListener("click", () => {
         cartasGuardadas.sort((a,b) => {
-            if (a.valor < b.valor) {
+            if (a.value < b.value) {
                 return -1;
             }
-            if (a.valor > b.valor) {
+            if (a.value > b.value) {
                 return 1;
             }
             return 0;
